@@ -32,6 +32,12 @@ code {
   white-space: pre-wrap;
   padding: 0 0.25em;
 }
+code::before {
+  content: '\\202a';
+}
+code::after {
+  content: '\\202c';
+}
 pre {
   padding: 0.5em;
   margin: 0.5em 0;
@@ -39,6 +45,7 @@ pre {
   white-space: pre;
   overflow-x: auto;
   word-wrap: normal;
+  direction: ltr;
 }
 code, pre {
   border-radius: 3px;
@@ -260,12 +267,12 @@ hr {
   object-fit: contain;
 }
 blockquote {
-  padding-left: 0.5em;
+  -webkit-padding-start: 0.5em;
   margin: 0.5em 0 0.5em 0;
-  border-left: 3px solid rgba(127, 127, 127, 0.5);
+  -webkit-border-start: 3px solid rgba(127, 127, 127, 0.5);
 }
 .message ul {
-  padding-left: 1.2em;
+  -webkit-padding-start: 1.2em;
   margin: 0.2em 0 0 0;
 }
 .message ul + p {
